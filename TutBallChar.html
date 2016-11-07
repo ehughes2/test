@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ball Char</title>
+</head>
+<body style="background-color: Lime;" onload="window_onLoad()">
+    <input id="charLeft" type="button" value="Left" onclick="btnLeft_onClick()" />
+    &nbsp;
+    <input id="charRight" type="button" value="Right" onclick="btnRight_onClick()" />
+    &nbsp;
+    <input id="charUp" type="button" value="Up" onclick="btnUp_onClick()" />
+    &nbsp;
+    <input id="charDown" type="button" value="Down" onclick="btnDown_onClick()" />
+    &nbsp;
+    <input id="charUpLeft" type="button" value="Up+Left" onclick="btnUpLeft_onClick()" />
+    &nbsp;
+    <input id="charUpRight" type="button" value="Up+Right" onclick="btnUpRight_onClick()" />
+    &nbsp;
+    <input id="charDownLeft" type="button" value="Down+Left" onclick="btnDownLeft_onClick()" />
+    &nbsp;
+    <input id="charDownRight" type="button" value="Down+Right" onclick="btnDownRight_onClick()" />
+    <img id="picBall" src="Images/BallChar.gif" style="position: absolute;" onmouseover="charBlink()" onmouseout="charNorm()" />
+</body>
+</html>
+
+<script language="javascript">
+    function window_onLoad() {
+        picBall.style.poslLeft = 200;
+        picBall.style.posTop = 100;
+        //window.setInterval("MoveBallRight()", 50);
+    }
+
+  /*function MoveBallRight(){
+    if ((picBall.style.posLeft + picBall.width + 5) < document.body.clientWidth){
+      picBall.style.posLeft = picBall.style.posLeft + 5;
+    }
+  } 
+
+  function btnLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - 5;
+  }
+
+  function btnRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + 5;
+  }
+
+  function btnUp_onClick() {
+      picBall.style.posTop = picBall.style.posTop - 5;
+  }
+
+  function btnDown_onClick() {
+      picBall.style.posTop = picBall.style.posTop + 5;
+  }
+
+  function charBlink() {
+      picBall.src = "Images/BallBlink.gif";
+  }
+
+  function charNorm() {
+      picBall.src = "Images/BallChar.gif";
+  }
+
+  function btnUpLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - 5;
+      picBall.style.posTop = picBall.style.posTop - 5;
+  }
+
+  function btnUpRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + 5;
+      picBall.style.posTop = picBall.style.posTop - 5;
+  }
+
+  function btnDownLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - 5;
+      picBall.style.posTop = picBall.style.posTop + 5;
+  }
+
+  function btnDownRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + 5;
+      picBall.style.posTop = picBall.style.posTop + 5;
+  }
+
+  */
+  function btnLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - parseInt(charSpeed.value);
+  }
+
+  function btnRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + parseInt(charSpeed.value);
+  }
+
+  function btnUp_onClick() {
+      picBall.style.posTop = picBall.style.posTop - parseInt(charSpeed.value);
+  }
+
+  function btnDown_onClick() {
+      picBall.style.posTop = picBall.style.posTop + parseInt(charSpeed.value);
+  }
+
+  function charBlink() {
+      picBall.src = "Images/BallBlink.gif";
+  }
+
+  function charNorm() {
+      picBall.src = "Images/BallChar.gif";
+  }
+
+  function btnUpLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - parseInt(charSpeed.value);
+      picBall.style.posTop = picBall.style.posTop - parseInt(charSpeed.value);
+  }
+
+  function btnUpRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + parseInt(charSpeed.value);
+      picBall.style.posTop = picBall.style.posTop - parseInt(charSpeed.value);
+  }
+
+  function btnDownLeft_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft - parseInt(charSpeed.value);
+      picBall.style.posTop = picBall.style.posTop + parseInt(charSpeed.value);
+  }
+
+  function btnDownRight_onClick() {
+      picBall.style.posLeft = picBall.style.posLeft + parseInt(charSpeed.value);
+      picBall.style.posTop = picBall.style.posTop + parseInt(charSpeed.value);
+  }
+</script>
+
